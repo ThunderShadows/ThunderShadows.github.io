@@ -30,10 +30,10 @@
         <h1>S G Sumanth</h1>
         <p class="headline">Backend & AI Engineer</p>
         <p class="sub">Building accountable AI agents, LLM pipelines & scalable backend systems.</p>
-        <p class="location">Bengaluru, India · Open to remote</p>
+        <p class="location">Bengaluru, India</p>
         <div class="links">
           <a href="https://github.com/ThunderShadows" target="_blank">GitHub</a>
-          <a href="https://www.linkedin.com/in/s-g-sumanth-b8a969277/" target="_blank">LinkedIn</a>
+          <a href="https://www.linkedin.com/in/s-g-sumanth-b8a969277" target="_blank">LinkedIn</a>
           <a href="https://x.com/SGSUMANTH1" target="_blank">X</a>
           <a href="mailto:sumanthusha01@gmail.com">Email</a>
         </div>
@@ -43,8 +43,8 @@
     <section id="about" class="section">
       <div class="container">
         <h2>About</h2>
-        <p>Hi, I'm Sumanth — a backend engineer who goes down to the internals. I build Python services, LLM pipelines and cloud plumbing at Aparoksha Financial Services (Loan2Wheels) in Bangalore, and study CSE at Dayananda Sagar University.</p>
-        <p>On the side I'm an indie hacker. I like building things end to end: Kafka streams, tiny ML models, bash that heals itself. Weekends are for photography, sketching anime characters, and reading Aurelius and Machiavelli.</p>
+        <p>Hi, I'm Sumanth — a backend engineer who goes down to the internals. I work as Backend Engineer L1 at Aparoksha Financial Services (Loan2Wheels) in Bengaluru, building Python, Go and Java services, LLM pipelines and production plumbing, and I study CSE at Dayananda Sagar University.</p>
+        <p>On the side I'm an indie hacker. I like building things end to end: voice agents, backend services, tiny ML models, bash that heals itself. Weekends are for photography, sketching anime characters, and reading Aurelius and Machiavelli.</p>
         <p>These days it's all about AI agents that are accountable — permissions, audit trails, budgets.</p>
         <blockquote>“You have power over your mind — not outside events. Realize this, and you will find strength.” <cite>— Marcus Aurelius</cite></blockquote>
       </div>
@@ -54,13 +54,14 @@
       <div class="container">
         <h2>Experience</h2>
         <div class="card">
-          <h3>Python Backend Developer</h3>
-          <p class="meta">Aparoksha Financial Services (Loan2Wheels) · Aug 2025 – Present · Bengaluru</p>
+          <h3>Backend Engineer L1</h3>
+          <p class="meta">Aparoksha Financial Services (Loan2Wheels) · June 2025 – Present · Bengaluru</p>
           <ul>
-            <li>Shipped an LLM service (Flask, GPT-4o) that turns Python loan-eligibility rules into plain-English text for business teams. Cached, batched and schema-validated.</li>
-            <li>Built API modules that take each loan through KYC, NACH mandate setup and disbursement, using Falcon and Google Pub/Sub.</li>
-            <li>Built SharePoint (Microsoft Graph, OAuth 2.0) and Zoho WorkDrive pipelines that collect Excel files automatically.</li>
-            <li>Automated SSL renewal across 3 production domains, and built an S3 storage-growth reporting tool with boto3 and pandas.</li>
+            <li>Built an LLM translation service (Python, Flask, OpenAI GPT-4o) that lets credit and operations teams read loan-eligibility rules in plain English. It deduplicates conditions, stores each unique translation so it is paid for only once, batches requests in groups of 20, and validates each JSON response.</li>
+            <li>Integrated a SarvamAI voice agent with Knowlarity telephony over SIP trunks to automate EMI repayment reminder calls for about 20,000 customers. A live server triggers each call and exposes a WebSocket the telephony API listens on; the agent is bridged to the customer and transfers to a human agent on request, with a timed queue delay based on agent availability.</li>
+            <li>Built an admin dashboard backend for managers and dealers to create and manage Agents, Dealers, Showrooms, Vehicles and Vehicle Manufacturers, with site distribution across Karnataka, Maharashtra and Gujarat.</li>
+            <li>Automated SSL/TLS renewal across 3 production domains: a daily cron job checks expiry and renews via certbot certonly within a 7-day threshold.</li>
+            <li>Diagnosed silent loss of WhatsApp delivery callbacks for six days on a lending platform, caused by a reverse proxy caching DNS for a mirrored upstream after a server address change. Fixed it with a zero-downtime reload, and proposed a static/private IP, a duplicate-send guard, and a callback-silence alert so the same failure would be caught quickly.</li>
           </ul>
         </div>
       </div>
@@ -72,12 +73,11 @@
         <div class="grid">
           <div class="card">
             <h3>RapportAI <span class="badge">In Progress</span></h3>
-            <p>AI support-ticket agent designed to fix SaaS billing and account issues through scoped tools against a Spring Boot API. Uses LangGraph, FastAPI, Postgres checkpoints and hybrid BM25 + pgvector RAG, with human approval for refunds.</p>
-            <a href="https://github.com/ThunderShadows/rapportai" target="_blank">View on GitHub</a>
+            <p>AI customer-support agent in active development. The system-of-record is a Java Spring Boot 4 service (support-core) with Postgres 16 and pgvector, Flyway migrations, and Testcontainers integration tests. A Python FastAPI/LangGraph agent service investigates tickets through scoped tools.</p>
           </div>
           <div class="card">
             <h3>Bastion <span class="badge">In Progress</span></h3>
-            <p>Go gateway being designed for agent tool and model calls, with per-tool policies, approvals, spend limits and model fallback. Tamper-evident audit logs, OpenTelemetry and a Rust (wasmtime) sandbox are planned.</p>
+            <p>Agent control plane in progress: a Go gateway that agent tool calls pass through, plus a Rust wasmtime WASM sandbox for untrusted tool code.</p>
           </div>
           <div class="card">
             <h3>Kudoodle</h3>
@@ -102,20 +102,16 @@
             <p>Python, Go, Java, SQL, Bash, Rust, TypeScript</p>
           </div>
           <div>
-            <h3>GenAI</h3>
-            <p>OpenAI & Claude APIs, LangGraph, MCP, RAG, hybrid search, reranking, LLM evals, prompt-injection defense, Langfuse</p>
+            <h3>AI / LLM</h3>
+            <p>LLM agents, RAG, MCP, LangGraph, voice AI (SarvamAI)</p>
           </div>
           <div>
             <h3>Backend</h3>
-            <p>FastAPI, Flask, Falcon, Spring Boot, REST, gRPC, webhooks, Pub/Sub, OAuth/OIDC, Keycloak</p>
+            <p>FastAPI, Flask, Spring Boot, REST, gRPC, WebSockets, nginx</p>
           </div>
           <div>
             <h3>Data & Cloud</h3>
-            <p>Postgres with pgvector, BigQuery, Redis, Kafka, AWS, GCP, Docker, Kubernetes, Helm, Terraform, GitHub Actions</p>
-          </div>
-          <div>
-            <h3>Observability</h3>
-            <p>OpenTelemetry, Prometheus, Grafana</p>
+            <p>Postgres/pgvector, Docker, AWS, GCP, GitHub Actions</p>
           </div>
         </div>
       </div>
@@ -129,8 +125,8 @@
           <p class="meta">Dayananda Sagar University · Nov 2022 – Oct 2026 · GPA 9.36/10</p>
         </div>
         <ul class="awards">
-          <li><strong>Winner</strong>, Nokia University Collaboration Challenge (Best Implementation) — TinyML weather station</li>
-          <li><strong>1st Place</strong>, Ideaverse'25 (IEEE ITSoc, DSU) — AI lunar-rover navigation</li>
+          <li><strong>1st Place</strong>, Ideaverse'25 (IEEE ITSoc, DSU) — lunar-rover navigation using LiDAR-camera fusion and reinforcement learning</li>
+          <li><strong>Winner</strong>, Nokia University Collaboration Challenge (Best Implementation) — TinyML weather station (~6 KB model)</li>
           <li><strong>Top 15</strong>, NITK Surathkal Capture The Flag</li>
           <li><strong>Microsoft Certified</strong>: Azure AI Fundamentals (AI-900)</li>
         </ul>
@@ -140,10 +136,10 @@
     <section id="contact" class="section">
       <div class="container">
         <h2>Contact</h2>
-        <p>Open to opportunities in backend engineering, AI agents and systems work. Reach out via email or LinkedIn.</p>
+        <p>Get in touch via email or LinkedIn.</p>
         <div class="links">
           <a href="mailto:sumanthusha01@gmail.com">sumanthusha01@gmail.com</a>
-          <a href="https://www.linkedin.com/in/s-g-sumanth-b8a969277/" target="_blank">LinkedIn</a>
+          <a href="https://www.linkedin.com/in/s-g-sumanth-b8a969277" target="_blank">LinkedIn</a>
           <a href="https://github.com/ThunderShadows" target="_blank">GitHub</a>
         </div>
       </div>
